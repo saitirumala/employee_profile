@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private store: StoreService) {
     this.isAuthenticated = false;
     this.isLoginClick=true;
+    
     const authKey=localStorage.getItem('authKey')
     if(authKey==='true'){
       

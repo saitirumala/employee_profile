@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
+
 import {LoginComponent} from './login/login.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   
     {
@@ -21,8 +22,10 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: PagenotfoundComponent
+    pathMatch: 'full',
+    redirectTo: '/login',
   },
+  { path: '**', component: PagenotfoundComponent }, 
 
 
 ];
